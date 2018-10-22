@@ -13,7 +13,8 @@ module Clamby
     :error_file_virus => false,
     :fdpass => false,
     :stream => false,
-    :output_level => 'medium'
+    :output_level => 'medium',
+    :block_macros => false
   }.freeze
 
   @config = DEFAULT_CONFIG.dup

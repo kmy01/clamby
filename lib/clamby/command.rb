@@ -17,7 +17,7 @@ module Clamby
       file_exists?(path)
 
       args = [path, '--no-summary']
-
+      args << '--block-macros=yes' if Clamby.config[:block_macros]
       if Clamby.config[:daemonize]
         args << '--fdpass' if Clamby.config[:fdpass]
         args << '--stream' if Clamby.config[:stream]
